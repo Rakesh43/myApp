@@ -1,0 +1,17 @@
+<form [formGroup]="myForm" (ngSubmit) = "checkData()">
+  <div>
+    <label>User Name</label>
+    <input type="text" formControlName="userName" class="form-control">
+    <div *ngIf="f.userName?.errors && f.userName?.errors.required">User Name Required</div>
+  </div>
+  <div>
+    <label>Password</label>
+    <input type="password" class="form-control" formControlName="password">
+    <div *ngIf="f.password?.errors && f.password?.errors.required">Password Required</div>
+  </div>
+  <button class="btn btn-primary">Submit</button>
+
+</form>
+<button routerLink="/register">Sign Up</button>
+login works
+

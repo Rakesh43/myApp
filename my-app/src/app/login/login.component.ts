@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class AppComponent {
+export class LoginComponent implements OnInit {
+
   myForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder){};
@@ -27,3 +28,4 @@ export class AppComponent {
   }
 
 }
+
