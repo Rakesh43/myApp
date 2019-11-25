@@ -1,4 +1,30 @@
 <p><b>Form Registration</b></p>
-<form formName ="register">
+<form [formGroup] ="register" (ngSubmit)="registerUser()">
+  <label>Name</label>
+  <input type=text formControlName="name" class="form-control">
+  <div *ngIf="r.name.errors">Name is required</div>
+  <br>
+  <label>User Name</label>
+  <input type="text" formControlName="userName"><br>
+  <div *ngIf="r.userName.errors && r.userName.errors.required">User name is required</div>
+  <div *ngIf="r.userName.errors && r.userName.errors.pattern">User name shoul include char</div>
+  <label>Email</label>
+  <input type="text" formControlName="email"><br>
+  <div *ngIf="r.email.errors && r.email.errors.required">email is required</div>
+  <div *ngIf="r.email.errors && r.email.errors.email">Incorrect email</div>
+  <label>Mobile</label>
+  <input type="text" formControlName="mobile"><br>
+  <div *ngIf="r.mobile.errors && r.mobile.errors.required">Mobile number is required</div>
+  <div *ngIf="r.mobile.errors && r.mobile.errors.minlength">Mobile number should be 10 digits</div>
+  <div *ngIf="r.mobile.errors && r.mobile.errors.pattern">Mobile number should be only digits</div>
+  <label>Password</label>
+  <input type="password" formControlName="password"><br>
+  <div *ngIf="r.password.errors && r.password.errors.required">Password is required</div>
+  <div *ngIf="r.password.errors && r.password.errors.minlength">password length issue</div>
+  <label>Confirm Password</label>
+  <input type="password" formControlName="confirmPassword"><br>
+  <div *ngIf="r.confirmPassword.errors && r.confirmPassword.errors.required">Password is required</div>
+  <div *ngIf="r.confirmPassword.errors && r.confirmPassword.errors.mustWatch">Password should watch</div>
 
+  <button class="btn btn-success">Register</button>
 </form>
