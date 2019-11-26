@@ -1,15 +1,15 @@
 <div  class="example-container">
-  <form [formGroup]="myForm" (ngSubmit) = "checkData()">
-    <mat-form-field>
+  <form class="form-class" [formGroup]="myForm" (ngSubmit) = "checkData()">
+    <mat-form-field class="form-field">
       <input matInput placeholder="User Name" formControlName="userName">
       <mat-error *ngIf="f.userName.errors && f.userName.errors.required">User Name Required</mat-error>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field class="form-field">
       <input matInput placeholder="Password" formControlName="password">
       <mat-error *ngIf="f.password.errors && f.password.errors.required">Password Required</mat-error>
     </mat-form-field>
-    <button class="btn btn-primary">Submit</button>
+    <br>
+    <button class="width-100" mat-raised-button color="primary">Submit</button>
   </form>
-  <button routerLink="/register">Sign Up</button>
 </div>
 
