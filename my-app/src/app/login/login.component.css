@@ -13,11 +13,22 @@
   width: 30%;
 }
 
-.display-block {
-  display: block !important;
+.example-container {
+  width: 100%;
 }
 
-.example-container {
+.form-field {
+  display: block;
+}
+
+.form-class {
   width: 30%;
+  align-self: center;
+  height: 70vh;
+  margin-top: 10%;
+}
+
+.width-100 {
+  width: 100%;
 }
 
