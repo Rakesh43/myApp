@@ -13,6 +13,17 @@
   width: 30%;
 }
 
+.container {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .example-container {
   width: 100%;
 }
